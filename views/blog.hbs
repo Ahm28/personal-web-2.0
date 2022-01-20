@@ -1,0 +1,56 @@
+{{>header}}
+{{>navbar}}
+
+    {{#if messages.success}}
+        <div class="alert alert-success" role="alert">
+            {{messages.success}}
+        </div>  
+    {{/if}}
+
+    <div class="container">
+    {{#if isLogin}}
+      <a class="btn bg-orange text-white my-3" href="/add-blog" role="button">Add New Blog</a>
+    {{/if}}
+    
+
+      {{#each blogs}}
+    <div class="container-blog d-flex justify-content-center my-5">
+
+      <div class="card p-4" style="max-width: 90%;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="../uploads/{{this.image}}" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+
+            <div class="card-body">
+            {{#if isLogin}}
+              <div class="d-flex justify-content-end" role="grup">
+                <a class="btn btn-sm btn-secondary me-2" href="/edit-blog/{{id}}" role="button">edit post</a>
+                <a class="btn bg-orange text-white btn-sm" href="/delete-blog/{{id}}" role="button" onclick="return confirm('Yakin Untuk Menghapus Post Ini?')">delete post</a>
+              </div>
+            {{/if}}
+
+              <h3 class="card-title">
+                <a href="/blog-detail/{{this.id}}" class="text-decoration-none text-black" target="_blank"
+                >{{this.title}}</a>
+              </h3>
+              <div class="detail-blog-content mb-3 fs-6">
+                {{this.fullTime}} | {{this.name}}
+              </div>  
+              <p class="card-text">
+                {{this.content}}
+              </p>
+              <p class="card-text">
+                <small class="text-muted">{{this.distance}}</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    </div>
+    {{/each}}
+  </div>
+{{>footer}}

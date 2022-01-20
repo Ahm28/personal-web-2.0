@@ -1,0 +1,42 @@
+{{>header}}
+{{>navbar}}
+
+    {{#if messages.danger}}
+        <div class="alert alert-danger" role="alert">
+            {{messages.danger}}
+        </div>  
+    {{/if}}
+
+
+  <div class="container-fluid  d-flex align-items-center justify-content-center">
+
+    <div class="card p-5 shadow">
+
+      <div class="container-form">
+        <p class="h2 text-center mb-4">Register</p>
+
+        <form action="/register" method="post">
+          <div class="mb-3">
+            <label for="inputTitle" class="form-label">Name</label>
+            <input name="inputName" type="text" class="form-control" id="inputTitle" aria-describedby="emailHelp" placeholder="Username">
+          </div>
+          <div class="mb-3">
+            <label for="inputEmail" class="form-label">Email</label>
+            <input name="inputEmail" type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email Address">
+          </div>
+          <div class="mb-3">
+            <label for="inputPassword" class="form-label">Password</label>
+            <input name="inputPassword" type="password" class="form-control" id="inputPassword" aria-describedby="emailHelp" placeholder="Password">
+          </div>
+          <p class="fs-6 fw-light">Already have an account? <a href="/login" class="fst-italic">Login</a> </p>
+          
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn bg-orange text-white">Register</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+{{>footer}}

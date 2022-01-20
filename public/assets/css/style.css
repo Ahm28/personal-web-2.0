@@ -1,0 +1,33 @@
+.bg-orange {
+  background-color: orangered;
+}
+
+.outline-orange {
+  border: 1px solid orangered;
+}
+
+.text-orange {
+  color: orangered !important;
+}
+
+.navbar {
+  height: 7vh;
+}
+
+.container-fluid {
+  height: 93vh;
+}
+
+.container-form {
+  width: 400px;
+}
+
+.social-media .icon a {
+  color: black;
+  font-size: 20px;
+}
+
+.img-thumbnail {
+  width: 130px;
+  height: 100px;
+}

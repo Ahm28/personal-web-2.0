@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Creating Blog Page - detail</title>
+    <link rel="stylesheet" href="../public/assets/css/style2.css" />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav>
+      <div class="left">
+          <a href="/">
+              <img src="../public/assets/images/logo.png" alt="nav logo">
+          </a>
+          <ul>
+              <li>
+                  <a href="/">Home</a>
+              </li>
+              <li>
+                  <a href="/blog">Blog</a>
+              </li>
+
+              <button type="button">
+                  <a href="/contact-me">Contact me</a>
+              </button>
+          </ul>
+      </div>
+      <div class="right">
+          <div class="nav-hamburger" id="nav-hamburger">
+              <input type="checkbox">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+      </div>
+  </nav>
+
+    <!-- Blog -->
+    <div class="blog-detail">
+      <div class="blog-detail-container">
+        <h1> {{blog.title}} </h1>
+        <div class="author"> {{blog.postAt}} | {{blog.author }} </div>
+        <img src="../public/assets/images/blog-img-detail.png" alt="detail" />
+        <p>
+         {{blog.content}}
+        </p>
+      </div>
+    </div>
+
+    <script src="../public/assets/js/form.js"></script>
+  </body>
+</html>

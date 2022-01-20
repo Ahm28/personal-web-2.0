@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f04c34">
+    <link rel="icon" href="../public/assets/images/logo.png" type="image/x-icon">
+
+    <!-- icons bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="../public/assets/css/style2.css">
+    <title>Contact Me </title>
+</head>
+<body>
+
+    <nav>
+        <div class="left">
+            <a href="/">
+                <img src="../public/assets/images/logo.png" alt="nav logo">
+            </a>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/blog">Blog</a>
+                </li>
+                <button type="button">
+                        <a href="/contact-me">Contact me</a>
+                </button>
+            </ul>
+        </div>
+
+        <div class="right">
+            <div class="nav-hamburger" id="nav-hamburger">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+
+
+    <div class="container-form">
+        <form method="post">
+            
+            <div>
+                <label for="input-name">Name</label>
+                <input type="text" id="input-name">         
+            </div>
+    
+            <div>
+                <label for="input-email">Email</label>
+                <input type="email" name="input-email" id="input-email">
+            </div>
+            
+            <div>
+                <label for="input-phone">Phone Number</label>
+                <input type="number" name="input-phone" id="input-phone" >
+    
+            </div>
+    
+            <div>
+                <h3>Skills : </h3>
+                <div class="skill" >
+                    <input type="checkbox" name="html" id="html" value="html">
+                    <label for="html">HTML</label>
+                    <input type="checkbox" name="css" id="css" value="css">
+                    <label for="css">CSS</label>
+                </div>
+            </div>
+    
+            <div>
+                <label for="input-subject">Subject</label>
+                <select name="input-subject" id="input-subject">
+    
+                    <option value="">Select Option</option>
+                    <option value="Privacy Police">Privacy Police</option>
+                    <option value="Problem with Our Site">Problem with Our Site</option>
+                    <option value="question on order">Question on Order</option>
+                    <option value="other question">Other Questions</option>
+                </select>
+    
+            </div>
+    
+    
+            <div>
+                <label for="input-message">Your Message</label>
+                <textarea name="input-message" id="input-message" cols="30" rows="10">
+                </textarea>
+    
+            </div>
+    
+            <button type="button" onclick="submitData()">
+                Submit
+            </button>
+    
+        </form> 
+    </div>
+
+
+    <div class="container-email " id="container-email">
+        <div class="card-email">
+            <div class="header-email">
+                <span>New Message</span>
+                <div class="icons-email">
+                    <i class="bi bi-dash" onclick="minimizeEmailCard()"></i>
+                    <i class="bi bi-x" onclick="deleteEmailCard()"></i>
+                </div>
+
+
+            </div>
+
+            <div class="body-email " id="body-email">
+                <div class="to-send-email">
+                    <h5>From : </h5>
+                    <div id="from-send-email">
+
+                    </div>
+                </div>
+                <div class="to-send-email">
+                    <h5>To : </h5>
+                    <div id="to-send-email">
+
+                    </div>
+                </div>
+
+                <div class="subject-send-email">
+                    <h5>Subject : </h5>
+                    <div id="subject-send-email">
+
+                    </div>
+
+                </div>
+
+                <div class="message-send-email" id="message-send-email">
+
+                </div>
+
+            </div>
+
+            <div class="footer-email " id="footer-email" >
+                <button type="button"> Send</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="../public/assets/js/form.js"></script>
+
+</body>
+</html>

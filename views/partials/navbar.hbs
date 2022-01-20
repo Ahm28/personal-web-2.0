@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="../public/assets/images/logo.png" alt="logo dumbways">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link fw-bold" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" aria-current="page" href="/blog">Blog</a>
+          </li>
+          
+        </ul>
+        {{#if isLogin}}
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                      <span class="nav-link" aria-current="page">Hallo, <strong>{{user.name}}</strong> </span>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="/logout">Logout</a>
+                  </li>
+              </ul>
+
+            {{else}}
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" aria-current="page" href="/register">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" aria-current="page" href="/login">Login</a>
+                </li>
+              </ul>
+  
+            {{/if}}
+          <a class="btn bg-orange text-light px-3 ms-3 fw-bold" style="background-color: orangered;" href="/contact-me">Contact me</a>
+      </div>
+    </div>
+  </nav>

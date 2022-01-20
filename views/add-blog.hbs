@@ -1,0 +1,29 @@
+{{>header}}
+{{>navbar}}
+
+  <div class="container-fluid  d-flex align-items-center justify-content-center">
+    <div class="container-form">
+      <p class="h2 text-center mb-4">Create Post Blog</p>
+
+      <form action="/blog" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="inputTitle" class="form-label">Title</label>
+          <input name="inputTitle" type="text" class="form-control" id="inputTitle" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="inputContent" class="form-label">Content</label>
+          <textarea name="inputContent" id="inputContent" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="inputImage" class="form-label">Upload Image</label>
+          <input name="inputImage" class="form-control" type="file" id="inputImage">
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn bg-orange text-white">Post Blog</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+{{>footer}}
